@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+    - main
+    - release/*
+    
+jobs:
+  snapcraft_build:
+    name: Create snap from repo
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install snapcraft
+      run: sudo apt install -y snapcraft
